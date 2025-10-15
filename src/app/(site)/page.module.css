@@ -1,0 +1,506 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: -3;
+}
+
+.mainImages {
+  opacity: 1;
+  transition: 0.4s ease;
+}
+.mainImages.hidden {
+  opacity: 0;
+  z-index: -300;
+  transition: 0.4s ease;
+}
+
+.moneyImg {
+  position: absolute;
+  right: 0;
+  z-index: 3;
+}
+
+.buyPage {
+  position: fixed;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.buyPage.show {
+  position: fixed;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.buyPage.show img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  transition: 0.1s;
+}
+
+.man:first-child {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: auto;
+}
+
+.man:last-child {
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: auto;
+}
+.choose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 104px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* мужик */
+.person {
+  position: relative;
+  width: 100%;
+  height: 105%;
+  z-index: 1;
+  animation: manRise 1.8s  forwards;
+  filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.6)) brightness(1.05)
+    contrast(1.1);
+  box-shadow: 0px 8px 0px 0px #000;
+}
+.centerImages {
+  align-self: flex-end;
+}
+
+@keyframes manRise {
+  0% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 5%;
+    opacity: 1;
+  }
+}
+/* мужик */
+
+.link {
+  position: relative;
+  z-index: 12;
+  color: #fff;
+  font-size: 45px;
+  font-family: "Benzin-bold", sans-serif;
+  font-weight: bold;
+  line-height: 112.00000000000001%;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 312;
+}
+
+.buy {
+  transition: 0.1s;
+}
+
+.buy:hover {
+  color: #58ff0a;
+  text-shadow: 0 0 6px #58ff0a;
+  transition: 0.1s;
+}
+
+.sell {
+  transition: 0.1s;
+}
+
+.sell:hover {
+  color: #ff0a0a;
+  text-shadow: 0px 0px 6px 0px #ff0a0a;
+  transition: 0.1s;
+}
+
+/* бегущая строка */
+.runstring {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  font-size: 90px;
+  line-height: 112%;
+  font-family: "Benzin-bold", sans-serif;
+  color: #fff20a;
+  overflow: hidden;
+  white-space: nowrap;
+  text-shadow: 0px 0px 6px #fff20a;
+}
+
+.track {
+  display: inline-flex;
+  animation: run 15s linear infinite;
+}
+
+.track span {
+  display: inline-block;
+  padding-right: 50px;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* бегущая строка */
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+
+/* Волк */
+.wolf {
+  position: absolute;
+  bottom: 0;
+  left: 47%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  opacity: 0;
+  animation: wolfAppear 1.8s  forwards;
+  filter: brightness(0.95) contrast(1.1) saturate(1.1);
+}
+
+@keyframes wolfAppear {
+  0% {
+    transform: translate(-50%) scale(1.2);
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%) scale(1);
+    opacity: 1;
+  }
+}
+/* Волк */
+
+/* Купюры */
+.righttop {
+  width: 20px;
+  height: 20px;
+  transform: rotate(90deg);
+  animation: righttop 1.8s  forwards;
+}
+
+@keyframes righttop {
+  0% {
+    right: 55%;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  100% {
+    width: 332px;
+    height: 328px;
+    top: 1%;
+    right: 8%;
+    z-index: 0;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.rightbottom {
+  width: 20px;
+  height: 20px;
+  right: 50%;
+  animation: rightbottom 1.8s  forwards;
+}
+
+@keyframes rightbottom {
+  0% {
+    bottom: 100%;
+    left: 55%;
+    opacity: 0;
+  }
+  100% {
+    width: 265px;
+    height: 296px;
+    bottom: 0px;
+    right: 18%;
+    z-index: 0;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+
+.leftbottom {
+  width: 20px;
+  height: 20px;
+  transform: rotate(60deg);
+  animation: leftbottom 1.8s  forwards;
+}
+
+@keyframes leftbottom {
+  0% {
+    bottom: 100%;
+    left: 55%;
+    transform: rotate(60deg);
+    opacity: 0;
+  }
+  100% {
+    width: 156px;
+    height: 158px;
+    left: 22%;
+    bottom: 6%;
+    z-index: 0;
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.leftmiddle {
+  top: 0%;
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  animation: leftmiddle 1.8s  forwards;
+}
+
+@keyframes leftmiddle {
+  0% {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+  }
+  100% {
+    width: 259px;
+    height: 308px;
+    top: 42%;
+    left: 4%;
+    z-index: -1;
+    transform: translateY(-50%);
+    opacity: 1;
+  }
+}
+
+.lefttop {
+  top: 0%;
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  transform: rotate(80deg);
+  animation: lefttop 1.8s  forwards;
+}
+
+@keyframes lefttop {
+  0% {
+    width: 20px;
+    height: 20px;
+    transform: rotate(80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    width: 142px;
+    height: 158px;
+    left: 21%;
+    top: 3%;
+    opacity: 1;
+  }
+}
+
+.topmiddle {
+  top: 0%;
+  right: 40%;
+  transform: rotate(80deg);
+  animation: topmiddle 1.8s  forwards;
+}
+
+@keyframes topmiddle {
+  0% {
+    width: 20px;
+    height: 20px;
+    transform: rotate(80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0deg);
+    width: 101px;
+    height: 112px;
+    right: 40%;
+    top: -6%;
+    opacity: 1;
+  }
+}
+/* Купюры */
+
+/* Ленты */
+/* Контейнер для всех лент */
+.lentaWrapper {
+  position: absolute;
+  z-index: -2;
+  overflow: visible;
+}
+
+.lentaTrack {
+  display: flex;
+}
+
+/* Верхняя черная лента */
+.lenta1 {
+  width: 230%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lentaTrack1 {
+  transform: rotate(20deg) translateX(100%);
+  animation: slideIn1 2s linear forwards, runForever1 6s linear 2s infinite;
+}
+
+@keyframes slideIn1 {
+  0% {
+    transform: rotate(20deg) translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(20deg) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes runForever1 {
+  0% {
+    transform: rotate(20deg) translateX(0);
+  }
+  100% {
+    transform: rotate(20deg) translateX(-50%);
+  }
+}
+
+/* Верхняя белая лента */
+.lenta2 {
+  width: 200%;
+  top: 0%;
+}
+
+.lentaTrack2 {
+  transform: rotate(-15deg) translateX(-100%);
+  animation: slideIn2 2s linear forwards, runForever2 6s linear 2s infinite;
+}
+
+@keyframes slideIn2 {
+  0% {
+    transform: rotate(-15deg) translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-15deg) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes runForever2 {
+  0% {
+    transform: rotate(-15deg) translateX(0);
+  }
+  100% {
+    transform: rotate(-15deg) translateX(-50%);
+  }
+}
+
+/* Нижняя черная лента */
+.lenta3 {
+  width: 200%;
+  bottom: 0%;
+}
+
+.lentaTrack3 {
+  transform: rotate(12deg) translateX(100%);
+  animation: slideIn3 2s linear, runForever3 6s linear 2s infinite;
+}
+
+@keyframes slideIn3 {
+  0% {
+    transform: rotate(12deg) translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(12deg) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes runForever3 {
+  0% {
+    transform: rotate(12deg) translateX(0);
+  }
+  100% {
+    transform: rotate(12deg) translateX(-50%);
+  }
+}
+
+/* Нижняя белая лента */
+.lenta4 {
+  width: 200%;
+  bottom: 40%;
+}
+
+.lentaTrack4 {
+  transform: rotate(-10deg) translateX(-100%);
+  animation: slideIn4 2s linear forwards, runForever4 6s linear 2s infinite;
+}
+
+@keyframes slideIn4 {
+  0% {
+    transform: rotate(-10deg) translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-10deg) translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes runForever4 {
+  0% {
+    transform: rotate(-10deg) translateX(0);
+  }
+  100% {
+    transform: rotate(-10deg) translateX(-50%);
+  }
+}
+
+.lentaTrack img {
+  height: 50px;
+  width: auto;
+}
+
+/* Ленты */
