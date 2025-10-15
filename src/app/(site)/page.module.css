@@ -80,7 +80,7 @@
   width: 100%;
   height: 105%;
   z-index: 1;
-  animation: manRise 1.8s  forwards;
+  animation: manRise 1.8s forwards;
   filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.6)) brightness(1.05)
     contrast(1.1);
   box-shadow: 0px 8px 0px 0px #000;
@@ -192,7 +192,7 @@
   height: 100%;
   z-index: -3;
   opacity: 0;
-  animation: wolfAppear 1.8s  forwards;
+  animation: wolfAppear 1.8s forwards;
   filter: brightness(0.95) contrast(1.1) saturate(1.1);
 }
 
@@ -216,7 +216,7 @@
   width: 20px;
   height: 20px;
   transform: rotate(90deg);
-  animation: righttop 1.8s  forwards;
+  animation: righttop 1.8s forwards;
 }
 
 @keyframes righttop {
@@ -240,7 +240,7 @@
   width: 20px;
   height: 20px;
   right: 50%;
-  animation: rightbottom 1.8s  forwards;
+  animation: rightbottom 1.8s forwards;
 }
 
 @keyframes rightbottom {
@@ -264,7 +264,7 @@
   width: 20px;
   height: 20px;
   transform: rotate(60deg);
-  animation: leftbottom 1.8s  forwards;
+  animation: leftbottom 1.8s forwards;
 }
 
 @keyframes leftbottom {
@@ -290,7 +290,7 @@
   left: 55%;
   width: 20px;
   height: 20px;
-  animation: leftmiddle 1.8s  forwards;
+  animation: leftmiddle 1.8s forwards;
 }
 
 @keyframes leftmiddle {
@@ -316,7 +316,7 @@
   width: 20px;
   height: 20px;
   transform: rotate(80deg);
-  animation: lefttop 1.8s  forwards;
+  animation: lefttop 1.8s forwards;
 }
 
 @keyframes lefttop {
@@ -340,7 +340,7 @@
   top: 0%;
   right: 40%;
   transform: rotate(80deg);
-  animation: topmiddle 1.8s  forwards;
+  animation: topmiddle 1.8s forwards;
 }
 
 @keyframes topmiddle {
@@ -449,21 +449,21 @@
 
 @keyframes slideIn3 {
   0% {
-    transform: rotate(12deg) translateX(100%);
+    transform: rotate(9deg) translateX(100%);
     opacity: 0;
   }
   100% {
-    transform: rotate(12deg) translateX(0);
+    transform: rotate(9deg) translateX(0);
     opacity: 1;
   }
 }
 
 @keyframes runForever3 {
   0% {
-    transform: rotate(12deg) translateX(0);
+    transform: rotate(9deg) translateX(0);
   }
   100% {
-    transform: rotate(12deg) translateX(-50%);
+    transform: rotate(9deg) translateX(-50%);
   }
 }
 
