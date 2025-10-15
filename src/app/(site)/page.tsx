@@ -14,7 +14,7 @@ export default function Start() {
 
       <div className={cn(s.mainImages, { [s.hidden]: buy || sell })}>
         <img
-          src="assets/main-page/bg1.png"
+          src="assets/main-page/bg1.webp"
           alt=" background"
           className={cn(s.bg)}
         />
@@ -83,8 +83,8 @@ export default function Start() {
       </div>
 
       <div className={cn(s.buyPage, { [s.show]: buy || sell })}>
-        {buy ? <img src="assets/main-page/buybg.png" alt="buy bg" /> : null}
-        {sell ? <img src="assets/main-page/sellbg.png" alt="sell bg" /> : null}
+        {buy ? <img src="assets/main-page/buybg.webp" alt="buy bg" /> : null}
+        {sell ? <img src="assets/main-page/sellbg.webp" alt="sell bg" /> : null}
       </div>
 
       <div className={s.choose}>
@@ -98,12 +98,12 @@ export default function Start() {
         </div>
         <div className={s.centerImages}>
           {buy || sell ? (
-            <img src="assets/main-page/left.png" alt="" className={s.man} />
+            <img src="assets/main-page/left.webp" alt="" className={s.man} />
           ) : null}
-          <img src="assets/main-page/man2.png" className={s.person} alt="man" />
+          <img src="assets/main-page/man.webp" className={s.person} alt="man" />
 
           {buy || sell ? (
-            <img src="assets/main-page/right.png" alt="" className={s.man} />
+            <img src="assets/main-page/right.webp" alt="" className={s.man} />
           ) : null}
         </div>
         <div
